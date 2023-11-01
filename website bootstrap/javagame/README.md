@@ -1,2 +1,0 @@
-# javagame
-text rpg
