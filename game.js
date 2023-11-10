@@ -49,7 +49,7 @@ function selectOption(option) {
     // adds state option to state store
     state = Object.assign(state, option.setState)
     state.money += (option.money),
-    
+    displayStats()
     startGame(nextTextNodeId)
     console.log(state)
 }
