@@ -12,33 +12,27 @@ body {
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 150vh;;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px,auto) repeat(5,100px);
   }
   
-.calculator-grid > button {
+.buttons {
     cursor: pointer;
     font-size: 2rem; 
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     outline: none;
     background-color: rgba(255, 255, 255, .75);
+    width: 100px;
   }
   
-.calculator-grid > button:hover {
-    background-color: rgba(255, 255, 255, .9);
+.buttons > input:hover {
+    background-color: rgba(156, 149, 149, 0.9);
   }
     
-input{
-    grid-column: span 4;
+.mainInput{
     border: none;
     text-align: end;
-    font-size: 75px;
-    background-color: rgb(191, 25, 25);
-
+    font-size: 100px;
+    background-color: rgb(22, 19, 19);
 }
-
-.span-two {
-    grid-column: span 2;
-}
-  
