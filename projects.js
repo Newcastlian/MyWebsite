@@ -1,8 +1,19 @@
-const htmlNumbers = document.querySelectorAll('[html-number]')
-const htmlOperation = document.querySelectorAll('[html-operation')
-const htmlEquals = document.querySelectorAll('[html-equals')
-const htmlDelete = document.querySelectorAll('[html-delete')
-const allClear = document.querySelectorAll('[html-all-clear')
+function appendToResult(value) {
+    document.getElementById('result').value += value;
+  }
 
+  function calculateResult() {
+    try {
+      document.getElementById('result').value = eval(document.getElementById('result').value);
+    } catch (error) {
+      document.getElementById('result').value = 'Error';
+    }
+  }
 
+  function clearResult() {
+    document.getElementById('result').value = '';
+  }
 
+console.log(appendToResult)
+
+  

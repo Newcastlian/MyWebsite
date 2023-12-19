@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="projectstyles.css">
+    <script defer src="projects.js"></script>
     <title>projects</title>
 </head>
 <body>
@@ -25,30 +26,35 @@
           </div>
         </div>
       </nav> 
-   <div class="calculator-grid">
-        <div class="output">
-          <div class="previous=operand"></div>
-          <div class="current-operand"></div>
-      </div>
-      <button html-all-clear class="span-two">AC</button>
-      <button html-delete >DEL</button>
-      <button html-operation>/</button>
-      <button html-number>1</button>
-      <button html-number>2</button>
-      <button html-number>3</button>
-      <button html-operation>*</button>
-      <button html-number>4</button>
-      <button html-number>5</button>
-      <button html-number>6</button>
-      <button html-operation>+</button>
-      <button html-number>7</button>
-      <button html-number>8</button>
-      <button html-number>9</button>
-      <button html-operation>-</button>
-      <button html-number>.</button>
-      <button html-number>0</button>
-      <button html-equals class="span-two">=</button>
-    </div>
+    <table class="calculator-grid">
+        <tr>
+          <td colspan="4" class="size"><input class="mainInput" type="text" id="result" style="color: aliceblue;width: 406px;height: 92px;;"></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="buttons" value="7" onclick="appendToResult('7')"></td>
+          <td><input type="button" class="buttons" value="8" onclick="appendToResult('8')"></td>
+          <td><input type="button" class="buttons" value="9" onclick="appendToResult('9')"></td>
+          <td><input type="button" class="buttons" value="/" onclick="appendToResult('/')"></td>
+        </tr>
+        <tr>
+          <td class="size"><input type="button" class="buttons" value="4" onclick="appendToResult('4')"></td>
+          <td><input type="button" class="buttons" value="5" onclick="appendToResult('5')"></td>
+          <td><input type="button" class="buttons" value="6" onclick="appendToResult('6')"></td>
+          <td><input type="button" class="buttons" value="-" onclick="appendToResult('-')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="buttons" value="1" onclick="appendToResult('1')"></td>
+          <td><input type="button" class="buttons" value="2" onclick="appendToResult('2')"></td>
+          <td><input type="button" class="buttons" value="3" onclick="appendToResult('3')"></td>
+          <td><input type="button" class="buttons" value="+" onclick="appendToResult('+')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="buttons" value="0" onclick="appendToResult('0')"></td>
+          <td><input type="button" class="buttons" value="." onclick="appendToResult('.')"></td>
+          <td><input type="button" class="buttons" value="=" onclick="calculateResult()"></td>
+          <td><input type="button" class="buttons" value="C" onclick="clearResult()"></td>
+        </tr>
+    </table>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

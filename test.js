@@ -1,14 +1,20 @@
-let result = document.getElementById("calcText").value;
 
-console.log(result)
+function appendToResult(value) {
+    document.getElementById('result').value += value;
+  }
 
-let calculate = (number) => {
-    if (result) {
-        result.value += number;
-    } else {
-        console.error("not workin ;(")
+  function calculateResult() {
+    try {
+      document.getElementById('result').value = eval(document.getElementById('result').value);
+    } catch (error) {
+      document.getElementById('result').value = 'Error';
     }
+  }
 
-}
+  function clearResult() {
+    document.getElementById('result').value = '';
+  }
 
-console.log(result)
+
+
+  
