@@ -16,4 +16,4 @@ function appendToResult(value) {
 
 console.log(appendToResult)
 
-  
+  // test
